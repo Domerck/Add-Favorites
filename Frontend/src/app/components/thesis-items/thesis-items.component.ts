@@ -1,6 +1,4 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
-
 import { Thesis } from '../../Thesis';
 
 @Component({
@@ -10,12 +8,8 @@ import { Thesis } from '../../Thesis';
 })
 export class ThesisItemsComponent implements OnInit {
   @Input() thesis: Thesis = {} as Thesis;
-  @Output() 
-
-  faHeart = faHeart;
 
   constructor() {}
 
   ngOnInit(): void {}
-
 }

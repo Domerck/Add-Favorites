@@ -14,7 +14,8 @@ export const THESES: Thesis[] = [
     dateSubmitted: 'April 24, 2021',
   },
   {
-    thesisName: 'Implementation of Robotic Surgeons in MSU Gensan Medical Courses',
+    thesisName:
+      'Implementation of Robotic Surgeons in MSU Gensan Medical Courses',
     authors: 'Diana Prince, Yusris Makarov',
     college: 'College of Natural Science and Mathematics',
     dateSubmitted: 'January 19, 2021',
@@ -24,5 +25,5 @@ export const THESES: Thesis[] = [
     authors: 'Mark Esther Casate',
     college: 'College of Fisheries',
     dateSubmitted: 'November 09, 2020',
-  }
+  },
 ];

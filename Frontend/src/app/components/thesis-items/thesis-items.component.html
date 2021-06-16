@@ -1,9 +1,10 @@
 <div class="thesis">
   <h3>
     {{ thesis.thesisName }}
-    <fa-icon [ngStyle]="{ color: 'grey' }" [icon]="faHeart" ></fa-icon>
+    <app-favorites-btn [thesis]="thesis"></app-favorites-btn>
   </h3>
   <p>{{ thesis.authors }}</p>
   <p>{{ thesis.college }}</p>
   <p>{{ thesis.dateSubmitted }}</p>
 </div>
+<app-favorites></app-favorites>
