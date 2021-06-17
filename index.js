@@ -4,7 +4,6 @@ const bodyparser = require('body-parser');
 const cors = require('cors')
 
 //Local Imports
-const { mongoose } = require('./Backend/models/db.js');
 var thesisController = require('./Backend/controllers/thesisController.js');
 var favoriteController = require('./Backend/controllers/favoriteController');
 
