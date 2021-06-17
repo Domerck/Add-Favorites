@@ -15,7 +15,12 @@ export class FavoritesComponent implements OnInit {
 
   ngOnInit(): void {
     this.favoriteService
-      .getFavorite()
+      .getFavorites()
       .subscribe((favorites) => (this.favorites = favorites));
+  }
+
+  deleteFavorite(favorite: Favorite){
+    this.favoriteService.deleteFavorite(favorite).subscribe( () => (this.favorites = this.favorites.filter((f) => f._id !== favorite._id))
+    );
   }
 }

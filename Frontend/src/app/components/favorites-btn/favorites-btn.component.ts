@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { FavoriteService } from './../../services/favorite.service';
+import { Thesis } from './../../Thesis';
+
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -7,9 +10,14 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./favorites-btn.component.css'],
 })
 export class FavoritesBtnComponent implements OnInit {
+  @Input() thesis: Thesis = {} as Thesis;
   faHeart = faHeart;
 
-  constructor() {}
+  constructor(private favoriteService: FavoriteService) {}
 
   ngOnInit(): void {}
+
+  addToFavorites() {
+    this.favoriteService.addFavorite(this.thesis).subscribe();
+  }
 }

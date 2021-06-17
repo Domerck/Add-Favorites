@@ -1,2 +1,7 @@
-<app-thesis-items *ngFor="let thesis of theses" [thesis]="thesis">
-</app-thesis-items>
+<a routerLink="/favorites"> Favorites List </a>
+<br>
+<app-thesis-items
+  *ngFor="let thesis of theses"
+  [thesis]="thesis"
+></app-thesis-items>
+

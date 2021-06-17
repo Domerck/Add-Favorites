@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 import { Favorite } from '../../Favorite';
 
@@ -10,9 +10,15 @@ import { Favorite } from '../../Favorite';
 })
 export class FavoritesItemsComponent implements OnInit {
   @Input() favorite: Favorite = {} as Favorite;
-  faHeart = faHeart;
+  @Output() onDeleteFavorite: EventEmitter<Favorite> = new EventEmitter();
+
+  faTrash = faTrash;
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  onDelete(){
+    this.onDeleteFavorite.emit(this.favorite);
+  }
 }

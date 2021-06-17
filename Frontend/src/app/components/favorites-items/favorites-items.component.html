@@ -1,8 +1,9 @@
 <div class="favorite">
   <h3>
     {{ favorite.thesisName }}
-    <fa-icon [ngStyle]="{ color: 'red' }" [icon]="faHeart"></fa-icon>
+    <button> <fa-icon [ngStyle]="{ color: 'Grey' }" [icon]="faTrash" (click)="onDelete()" > </fa-icon> Remove </button> 
   </h3>
+
   <p>{{ favorite.authors }}</p>
   <p>{{ favorite.college }}</p>
   <p>{{ favorite.dateSubmitted }}</p>

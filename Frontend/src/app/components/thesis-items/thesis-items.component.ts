@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
-
 import { Thesis } from '../../Thesis';
 
 @Component({
@@ -10,12 +9,8 @@ import { Thesis } from '../../Thesis';
 
 export class ThesisItemsComponent implements OnInit {
   @Input() thesis: Thesis = {} as Thesis;
-  
-
-  
 
   constructor() {}
 
   ngOnInit(): void {}
-
 }

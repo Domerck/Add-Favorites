@@ -1,7 +1,7 @@
 <div class="thesis">
   <h3>
     {{ thesis.thesisName }}
-    <app-favorites-btn></app-favorites-btn>
+    <app-favorites-btn [thesis]="thesis"></app-favorites-btn>
   </h3>
   <p>{{ thesis.authors }}</p>
   <p>{{ thesis.college }}</p>
