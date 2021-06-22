@@ -1,0 +1,13 @@
+.thesis {
+  background: #f4f4f4;
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
+.thesis h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

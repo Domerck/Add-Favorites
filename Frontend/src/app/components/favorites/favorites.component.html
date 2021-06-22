@@ -1,5 +1,6 @@
-<h2>Favorites</h2>
-<a routerLink="/"> Home </a>
+ <a routerLink="/"> <button class="btn"> Home </button> </a>
+<div></div>
+ <h2>Favorites</h2>
 <app-favorites-items *ngFor="let favorite of favorites" [favorite]="favorite" (onDeleteFavorite)= "deleteFavorite(favorite)">
 </app-favorites-items>
 

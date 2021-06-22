@@ -4,6 +4,8 @@ import { Thesis } from './../../Thesis';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
+declare var M: any;
+
 @Component({
   selector: 'app-favorites-btn',
   templateUrl: './favorites-btn.component.html',
@@ -19,5 +21,7 @@ export class FavoritesBtnComponent implements OnInit {
 
   addToFavorites() {
     this.favoriteService.addFavorite(this.thesis).subscribe();
+    alert("Added to Favorites")
+  
   }
 }

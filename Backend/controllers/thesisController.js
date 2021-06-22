@@ -61,7 +61,7 @@ router.delete('/:id', (req, res) => {
 
 	Thesis.findByIdAndRemove(req.params.id, (err, doc) => {
 		if (!err) {
-			req.send(doc);
+			res.send(doc);
 		} else
 			console.log(
 				`Error in favorites Deletion: ${JSON.stringify(err, undefined, 2)}`

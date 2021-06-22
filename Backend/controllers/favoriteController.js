@@ -59,7 +59,7 @@ router.delete("/:id", (req, res) => {
 
   Favorite.findByIdAndRemove(req.params.id, (err, doc) => {
     if (!err) {
-      req.send(doc);
+      res.send(doc);
     } else
       console.log(`Error in Removing Favorites: ${JSON.stringify(err, undefined, 2)}`
       );
