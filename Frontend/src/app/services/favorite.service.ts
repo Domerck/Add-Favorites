@@ -12,7 +12,7 @@ export class FavoriteService {
   private apiUrl = 'http://localhost:5000/favorite';
 
   constructor(private http: HttpClient) {}
-  //get list of favorites
+  
   addFavorite(thesis: Thesis): Observable<Favorite[]> {
     return this.http.post<Favorite[]>(this.apiUrl, thesis);
   }

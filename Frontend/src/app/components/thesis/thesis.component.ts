@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { Thesis } from '../../Thesis';
 import { ThesisService } from '../../services/thesis.service';
-// import { THESES } from '../../mock-thesis';
 
 @Component({
   selector: 'app-thesis',
@@ -15,8 +14,6 @@ export class ThesisComponent implements OnInit {
   constructor(private thesisService: ThesisService) {}
 
   ngOnInit(): void {
-     this.thesisService
-      .getThesis()
-      .subscribe((theses) => (this.theses = theses));
+     this.thesisService.getThesis().subscribe((theses) => (this.theses = theses));
   }
 }
